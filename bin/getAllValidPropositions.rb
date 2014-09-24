@@ -7,7 +7,9 @@ numberArray = [1,2,3,4]
 i=0
 c=0
 numberArray.each do |i|
-	typeArray.each do |type| 
+  puts "\n"
+	typeArray.each do |type|
+
 		typeArray.each do |secondtype|
 			typeArray.each do |thirdtype|
 				form = Form.new(PropositionType.new(type), PropositionType.new(secondtype), PropositionType.new(thirdtype), FigureType.new(i))

@@ -2,15 +2,19 @@
 
 require_relative "../lib/catlog.rb"
 
-form = Form.new(PropositionType.new("A"), PropositionType.new("A"), PropositionType.new("A"), FigureType.new(3))
+form = Form.new(PropositionType.new("E"), PropositionType.new("O"), PropositionType.new("E"), FigureType.new(2))
 puts "Testing: #{form.getForm}"
 
 syllogism = form.getFormSyllogism
 conclusion = syllogism.getConclusion
-conclusion.displayProposition
+#conclusion.displayProposition
 
 
 puts form.getValidity
+puts "=============="
 puts form.displayValidity
 puts "Propositional form:"
 puts form.displayPropositionalForm
+
+
+
