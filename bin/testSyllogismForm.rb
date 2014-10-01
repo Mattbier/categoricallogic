@@ -2,7 +2,7 @@
 
 require_relative "../lib/catlog.rb"
 
-form = Form.new(PropositionType.new("E"), PropositionType.new("O"), PropositionType.new("E"), FigureType.new(2))
+form = Form.new(PropositionType.new("E"), PropositionType.new("E"), PropositionType.new("A"), FigureType.new(2))
 puts "Testing: #{form.getForm}"
 
 syllogism = form.getFormSyllogism

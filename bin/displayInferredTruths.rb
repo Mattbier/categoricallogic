@@ -13,13 +13,19 @@ premises2 = [Proposition.new("universal", "dogs", "affirmative", "animals", true
            	Proposition.new("particular", "animals", "affirmative", "carnivores", true)]
 
 
-premises1 = [Proposition.new("universal", "Events", "affirmative", "Caused Happenings", true),
-        	Proposition.new("universal", "Free Decisions", "negative", "Caused Happenings", true),
-          Proposition.new("universal", "Caused Happenings", "affirmative", "Physical", true)]
+premises1 = [Proposition.new("universal", "Mammals", "affirmative", "Mortal Things", true),
+        	Proposition.new("universal", "People", "affirmative", "Mammals", true),]
 
         	
 
 collection = PremiseCollection.new(premises1)
+puts "==============="
+puts "intial set"
+puts premises1.count
+puts "================="
+premises1.each do |proposition|
+proposition.displayProposition
+end
 
-collection.displayInferredTruths
-puts "#{collection.getNumberOfInferredTruths} / #{collection.getNumberOfInputTruths}: #{collection.getRatioInputToInferred}/1"
+collection.displayLoopedInferredTruths
+#puts "#{collection.getNumberOfInferredTruths} / #{collection.getNumberOfInputTruths}: #{collection.getRatioInputToInferred}/1"

@@ -11,4 +11,4 @@ premisesArray = [Proposition.new("universal", "Events", "affirmative", "Caused H
 
 proposition = Proposition.new("universal", "Free Decisions", "affirmative", "Caused Happenings", true)
 
-puts proposition.isUnique?(premisesArray)
+puts proposition.numberOfOccurences(premisesArray)
